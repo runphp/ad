@@ -15,7 +15,12 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+// socialite login
+Route::get('auth/login/{socialite}', 'Auth\AuthController@getLogin');
+Route::get('auth/socialite/{socialite}', 'Auth\AuthController@socialite');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
