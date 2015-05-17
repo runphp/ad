@@ -1,4 +1,7 @@
-<?php namespace App\Http\Controllers\Auth;
+<?php
+
+
+namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
@@ -20,6 +23,8 @@ class AuthController extends Controller {
 	 * |
 	 */
 
+	private $redirectPath = '/';
+
 	use AuthenticatesAndRegistersUsers {
         getLogin as traitGetLogin;
     }
@@ -39,7 +44,6 @@ class AuthController extends Controller {
 				'except' => 'getLogout'
 		] );
 	}
-
 	public function getLogin($socialite = null) {
 		if ($socialite) {
 			return Socialize::with ( $socialite )->redirect ();
@@ -47,11 +51,10 @@ class AuthController extends Controller {
 			return $this->traitGetLogin ();
 		}
 	}
-
 	public function socialite($socialite = null) {
-		$user = Socialize::with($socialite)->user();
+		$user = Socialize::with ( $socialite )->user ();
 
-		dd($user);
+		dd ( $user );
 		// OAuth Two Providers
 		$token = $user->token;
 
@@ -60,10 +63,10 @@ class AuthController extends Controller {
 		$tokenSecret = $user->tokenSecret;
 
 		// All Providers
-		$user->getId();
-		$user->getNickname();
-		$user->getName();
-		$user->getEmail();
-		$user->getAvatar();
+		$user->getId ();
+		$user->getNickname ();
+		$user->getName ();
+		$user->getEmail ();
+		$user->getAvatar ();
 	}
 }

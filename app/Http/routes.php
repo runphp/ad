@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('welcome', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 // socialite login
 Route::get('auth/login/{socialite}', 'Auth\AuthController@getLogin');
