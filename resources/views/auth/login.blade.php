@@ -50,6 +50,7 @@
 								<button type="submit" class="btn btn-primary">Login</button>
 
 								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
+								<a href="{{ url('/auth/login/qq') }}"><img src="http://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/Connect_logo_7.png" alt="Connect_logo_7.png" /></a>
 							</div>
 						</div>
 					</form>
