@@ -31,17 +31,10 @@ return [
 		'stripe' => [
 				'model' => 'App\User',
 				'key' => '',
-				'secret' => ''
-		],
-		'github' => [
-				'client_id' => '2ab706059c6cd2300413',
-				'client_secret' => '39a51dbfc3a4d2fa00c697bedb31f0b5b4095172',
-				'redirect' => 'http://runphp.net/auth/socialite/github'
-		],
-		'qq' => [
-				'client_id' => '101216002',
-				'client_secret' => 'd6e5afcc6c3220eed2ad7044345c3361',
-				'redirect' => 'http://runphp.net/auth/socialite/qq'
-		]
-]
-;
+				'secret' => ''],
+    'qq' => [
+        'client_id' => env('QQ_KEY'),
+        'client_secret' => env('QQ_SECRET'),
+        'redirect' => env('QQ_REDIRECT_URI'),
+	]
+];

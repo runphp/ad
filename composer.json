@@ -8,12 +8,12 @@
 	"license" : "MIT",
 	"type" : "project",
 	"require" : {
-		"laravel/framework" : "5.0.*"
+		"laravel/framework" : "5.0.*",
+		"socialiteproviders/qq": "1.0.1"
 	},
 	"require-dev" : {
 		"phpunit/phpunit" : "~4.0",
-		"phpspec/phpspec" : "~2.1",
-		"laravel/socialite" : "~2.0.4"
+		"phpspec/phpspec" : "~2.1"
 	},
 	"autoload" : {
 		"classmap" : [

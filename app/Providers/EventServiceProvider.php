@@ -5,16 +5,20 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 
 class EventServiceProvider extends ServiceProvider {
 
-	/**
-	 * The event handler mappings for the application.
-	 *
-	 * @var array
-	 */
-	protected $listen = [
-		'event.name' => [
-			'EventListener',
-		],
-	];
+    /**
+     * The event handler mappings for the application.
+     *
+     * @var array
+     */
+    protected $listen = [
+        'event.name' => ['EventListener'],
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            \SocialiteProviders\Qq\QqExtendSocialite::class
+        ],
+        'auth.login' => [
+            \App\Handlers\Events\AuthLoginEventHandler::class,
+        ],
+    ];
 
 	/**
 	 * Register any other events for your application.

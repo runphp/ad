@@ -9,6 +9,7 @@ use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Laravel\Socialite\Facades\Socialite as Socialize;
 use Illuminate\Http\Request;
+use App\SocialiteQq;
 
 class AuthController extends Controller {
 
