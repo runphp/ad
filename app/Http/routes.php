@@ -20,7 +20,6 @@ Route::get('auth/login/{socialite}', 'Auth\AuthController@getLogin');
 Route::get('auth/socialite/{socialite}', 'Auth\AuthController@socialite');
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);
-

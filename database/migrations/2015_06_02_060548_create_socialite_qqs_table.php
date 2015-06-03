@@ -3,12 +3,10 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSocialiteQqsTable extends Migration {
-
+class CreateSocialiteQqsTable extends Migration
+{
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
@@ -22,14 +20,11 @@ class CreateSocialiteQqsTable extends Migration {
             });
     }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('socialite_qqs');
-	}
-
+    /**
+     * Reverse the migrations.
+     */
+    public function down()
+    {
+        Schema::drop('socialite_qqs');
+    }
 }

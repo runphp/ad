@@ -1,15 +1,14 @@
-<?php  namespace App\Providers;
+<?php
+
+namespace app\Providers;
 
 use Laravel\Socialite\SocialiteServiceProvider as LaravelSocialiteServiceProvider;
 use App\Socialite\SocialiteManager;
 
 class SocialiteServiceProvider extends LaravelSocialiteServiceProvider
 {
-
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {
