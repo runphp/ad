@@ -8,12 +8,13 @@
 	"license" : "MIT",
 	"type" : "project",
 	"require" : {
-		"laravel/framework" : "5.0.*",
+		"laravel/framework" : "5.1.*",
 		"socialiteproviders/qq": "1.0.1"
 	},
 	"require-dev" : {
 		"phpunit/phpunit" : "~4.0",
-		"phpspec/phpspec" : "~2.1"
+		"phpspec/phpspec" : "~2.1",
+		"fabpot/php-cs-fixer" : "1.8.1"
 	},
 	"autoload" : {
 		"classmap" : [
@@ -32,11 +33,13 @@
 		"post-install-cmd" : [
 			"php artisan clear-compiled",
 			"php artisan optimize",
-			"cp .env.example .env"
+			"cp .env.example .env",
+			"php artisan migrate"
 		],
 		"post-update-cmd" : [
 			"php artisan clear-compiled",
-			"php artisan optimize"
+			"php artisan optimize",
+			"vendor/bin/php-cs-fixer fix --config-file=\".php_cs\""
 		]
 	},
 	"config" : {
