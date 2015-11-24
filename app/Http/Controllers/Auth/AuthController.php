@@ -42,6 +42,7 @@ class AuthController extends Controller
                 'except' => 'getLogout',
         ]);
     }
+
     public function getLogin($socialite = null)
     {
         if ($socialite) {
@@ -50,6 +51,7 @@ class AuthController extends Controller
             return $this->traitGetLogin();
         }
     }
+
     public function socialite($socialite = null)
     {
         $user = Socialize::with($socialite)->user();
