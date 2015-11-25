@@ -23,3 +23,9 @@ Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
 ]);
+
+// profile
+Route::get('profile', [
+    'middleware' => 'auth',
+    'uses' => 'ProfileController@show'
+]);
